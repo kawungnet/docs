@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Kawung Network Documentation</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Kawung Network Documentaion, Getting Started">
+    <meta name="author" content="Kawung Network">    
+    <link rel="shortcut icon" href="./assets/images/logo.png"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="https://kawungnet.github.io">
+						<img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo">
+						<span class="logo-text">Kawung Network
+							<span class="text-alt">Docs</span>
+						</span>
+						</a>
+					</div>    
+                </div>
+				<!--//docs-logo-wrapper-->
+	            
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://github.com/kawungnet"><i class="fab fa-github fa-fw"></i></a></li>
+			            <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li> -->
+		            </ul><!--//social-list-->
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">What is LoRa</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">What is Kawung Node</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">LoRa vs LoRaWAN vs Kawung Network</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Arduino</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Raspberry Pi</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Others</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Kawung Node</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Node ID</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Spreading Factor</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Bandwidth</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Coding Rate</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Sync Word</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Route Path</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Message Properties</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Sending Message</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-shield"></i></span>Security</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Changing Encryption Keys</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+
+
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+							<div class="alert alert-info" role="alert">
+								This page is under construction
+							</div>
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 05-02-2023</span></h1>
+					    <section class="docs-intro">
+						<p></p>
+						</section><!--//docs-intro-->
+
+				    </header>
+
+					<!-- Section 1.1 -->
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">What is LoRa</h2>
+						<p>LoRa (Long Range) adalah sebuah turunan dari komunikasi radio point-to-point dengan memanfaatkan teknik modulasi 
+						<a class="theme-link" href="https://en.wikipedia.org/wiki/Chirp_spread_spectrum" target="_blank">chirp spread spectrum (CSS)</a>. 
+						Dikembangkan oleh 
+						<a class="theme-link" href="https://www.semtech.com" target="_blank">Semtech</a>
+						, LoRa dikenal mampu mengirimkan informasi dalam jangkauan yang cukup jauh dan tetap berdaya rendah dengan memanfaatkan teknik modulasi ini. 
+						LoRa sendiri lebih merujuk pada komunikasi dengan berdasar pada chip yang dikembangkan oleh Semtech, yaitu SX127x.</p>
+					</section><!--//section-->
+
+					<!-- Section 1.2 -->
+				    <section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">What is Kawung Node</h2>
+						<p>Kawung Node adalah sebuah modul komunikasi berbasis LoRa yang digunakan di dalam Kawung Network. 
+						Kawung Node tidak hanya mampu bekerja dalam komunikasi point-to-point, namun juga mendukung komunikasi dalam topologi mesh. 
+						Topologi mesh dikenal mampu untuk menjaga stabilitas koneksi antar node dengan memanfaatkan fitur self-healing. 
+						Dengan menggabungkan komunikasi LoRa dengan topologi mesh, komunikasi dapat dilakukan pada jangkauan yang lebih jauh daripada komunikasi LoRa biasa. 
+						Dengan kemampuan tersebut, network coverage LoRa dapat yang pada saat bersamaan dapat mengurangi jumlah gateway untuk daerah tertentu.
+						</p>
+					</section><!--//section-->
+
+					<!-- Section 1.3 -->
+				    <section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">LoRa vs LoRaWAN vs Kawung Network</h2>
+						<p>Kawung network adalah protokol komunikasi yang berbeda dengan jaringan LoRaWAN. 
+						Walaupun sama-sama menggunakan chip komunikasi LoRa, namun Kawung node belum bisa digabungkan dengan jaringan LoRaWAN. 
+						Perbedaan lebih jauh dapat dilihat pada tabel di bawah.
+						</p>
+
+						<div class="table-responsive my-4">
+							<table class="table table-striped" style="text-align:center">
+								<thead>
+									<tr>
+										<th scope="col">Parameter</th>
+										<th scope="col">LoRa</th>
+										<th scope="col">LoRaWAN</th>
+										<th scope="col">Kawung Network</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Komunikasi LoRa</th>
+										<td><i class="fa-sharp fa-solid fa-circle-check" style="color:green"></i></td>
+										<td><i class="fa-shar3p fa-solid fa-circle-check" style="color:green"></i></td>
+										<td><i class="fa-sharp fa-solid fa-circle-check" style="color:green"></i></td>
+									</tr>
+									<tr>
+										<th scope="row">Topologi</th>
+										<td>Point-to-Point</td>
+										<td>Star</td>
+										<td>Mesh</td>
+									</tr>
+									<tr>
+										<th scope="row">Jangkauan</th>
+										<td>Jauh</td>
+										<td>Jauh</td>
+										<td>Lebih Jauh</td>
+									</tr>
+									<tr>
+										<th scope="row">Enkripsi</th>
+										<td><i class="fa-sharp fa-solid fa-circle-xmark" style="color:red"></i></td>
+										<td>AES-128</td>
+										<td>AES-128</td>
+									</tr>
+									<tr>
+										<th scope="row">Time On Air</th>
+										<td>Singkat</td>
+										<td>Singkat</td>
+										<td>Lebih Lama</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</section><!--//section-->
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+							<p>
+							Kawung Node menggunakan protokol UART sebagai interface komunikasi dengan perangkat elektronik lainnya. 
+							Untuk mendukung pengembangan hardware Anda, kami menyarankan untuk menggunakan software <a class="theme-link" href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE</a>.
+							</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Arduino</h2>
+						<p>
+						Untuk menggunakan Kawung Node di Arduino, Anda tidak memerlukan library khusus.
+						</p>
+						<p>
+						Hubungkan pin Arduino seperti pada tabel di bawah.
+						</p>
+						<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+						<table class="table table-sm" style="text-align:center">
+							<thead>
+								<tr>
+									<th scope="col">Kawung Node</th>
+									<th scope="col">Arduino</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>VCC</td>
+									<td>+5V</td>
+								</tr>
+								<tr>
+									<td>RX</td>
+									<td>D7</td>
+								</tr>
+								<tr>
+									<td>TX</td>
+									<td>D6</td>
+								</tr>
+								<tr>
+									<td>GND</td>
+									<td>GND</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+						<div class="col-sm-4"></div>
+						</div>
+
+						<p>Kode program di bawah adalah contoh kode yang dapat digunakan untuk berkomunikasi dengan Kawung Node.
+						</p>
+
+						<div class="docs-code-block">
+							<!-- ** Embed github code starts ** -->
+							<script src="https://gist.github.com/SuryaAssistant/1fecc4717e1014068b2c28672140ee42.js"></script>
+							<!-- ** Embed github code ends ** -->
+						</div><!--//docs-code-block-->
+
+						<p>Untuk melihat daftar perintah command, lihat bagian 3 (Kawung Node).</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Raspberry Pi</h2>
+						<!-- ALERT -->
+						<div class="alert alert-danger" role="alert">
+							Hati-Hati! Pin GPIO Raspberry Pi tidak toleran terhadap tegangan 5V.
+						</div>
+
+						<p>
+						Terdapat dua cara untuk menghubungkan Kawung Node ke Raspberry Pi, yaitu UART via GPIO atau UART via serial port. 
+						</p>
+
+						<p>
+						1. UART via GPIO Pin
+						<br>
+						Hubungkan pin Kawung Node dengan pin GPIO Raspberry Pi seperti tabel di bawah. Untuk pin TX dan RX, gunakan level shifter.
+						</p>
+						<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+						<table class="table table-sm" style="text-align:center">
+							<thead>
+								<tr>
+									<th scope="col">Kawung Node</th>
+									<th scope="col">Level Shifter</th>
+									<th scope="col">Raspberry Pi</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>VCC</td>
+									<td>HV - LV</td>
+									<td>+3V3</td>
+								</tr>
+								<tr>
+									<td>RX</td>
+									<td>HV1 - LV1</td>
+									<td>GPIO14</td>
+								</tr>
+								<tr>
+									<td>TX</td>
+									<td>HV2 - LV2</td>
+									<td>GPIO15</td>
+								</tr>
+								<tr>
+									<td>GND</td>
+									<td>GND - GND</td>
+									<td>GND</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+						<div class="col-sm-4"></div>
+						</div>
+
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Others</h2>
+						<p>
+						Kawung Node dapat dihubungkan ke mikrokontroler lain selama pin komunikasi UART KAWUNG Node 
+						terhubung dengan pin komunikasi mikrokontroler lain. 
+						Perlu Diketahui jika tegangan kerja Kawung Node adalah di 5V sehingga mungkin memerlukan level shifter 
+						untuk dapat bekerja dengan mikrokontroler lain.
+						<br>
+						</p>
+						<p>Konfigurasi yang diperlukan:
+						</p>
+						<p>Koneksi Pin</p>
+						<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+						<table class="table table-sm" style="text-align:center">
+							<thead>
+								<tr>
+									<th scope="col">Kawung Node</th>
+									<th scope="col">Mikrokontroler lain</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>VCC</td>
+									<td>+5V</td>
+								</tr>
+								<tr>
+									<td>RX</td>
+									<td>TX</td>
+								</tr>
+								<tr>
+									<td>TX</td>
+									<td>RX</td>
+								</tr>
+								<tr>
+									<td>GND</td>
+									<td>GND</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+						<div class="col-sm-4"></div>
+						</div>
+
+						<p>Dalam komunikasi UART dengan Kawung Node, gunakan baudrate 115200.
+						</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Kawung Node</h1>
+					    <section class="docs-intro">
+							<p>
+							Command di bawah hanya dapat dijalankan melalui komunikasi UART setelah Kawung Node terinstall. 
+							Untuk cara install Kawung Node, lihat bagian 2 (Installation).
+							</p>
+						</section><!--//docs-intro-->
+				    </header>
+				    <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Node ID</h2>
+						<p>
+						Node ID adalah sebuah kode identitas setiap Kawung Node yang terdiri dari 6 karakter. 
+						Node ID tiap Kawung Node dibuat berbeda untuk membedakan node satu dengan yang lain.
+						</p>
+						<p>Melihat ID Kawung Node
+						<br>
+						<br>
+						<i class="fa-solid fa-code"></i> read_id
+						</p>
+						</section>
+				    <section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Spreading Factor</h2>
+						<p>Spreading Factor (SF) bernilai dari 7 sampai 12. 
+						Node pengirim dengan Node penerima harus memiliki parameter SF yang sama. 
+						Untuk mengubah preferensi SF, gunakan command di bawah. 
+						Secara default SF di-set di SF 8.
+						<br>
+						<br>
+						<i class="fa-solid fa-code"></i> set_sf | [pilih angka 7-12]
+						</p>
+						</section>
+				    <section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Bandwidth</h2>
+						<p>Bandwidth terbagi menjadi tiga kategori, yaitu 125 kHz, 250 kHz, dan 500 kHz. 
+						Gunakan angka 125, 250, atau 500 untuk memilih bandwith. 
+						Secara default, bandwidth di-set di 125 kHz.
+						<br>
+						<br>
+						<i class="fa-solid fa-code"></i> set_bw | [125/250/500]
+						</p>
+						</section>
+				    <section class="docs-section" id="item-3-4">
+						<h2 class="section-heading">Coding Rate</h2>
+						<p>
+						</p>
+						</section>
+				    <section class="docs-section" id="item-3-5">
+						<h2 class="section-heading">Sync Word</h2>
+						<p>Sync Word bernilai antara 0 hingga 255. Sync Word node pengirim harus sama dengan node penerima. 
+						Secara default, sync word di-set di angka 12.
+						<br>
+						<br>
+						<i class="fa-solid fa-code"></i> set_sw | [pilh angka 0-255]
+						</p>
+						</section>
+				    <section class="docs-section" id="item-3-6">
+						<h2 class="section-heading">Route Path</h2>
+						<p>Route Path adalah jalur pengiriman pesan di dalam jaringan mesh. 
+						Secara otomatis, sistem akan mencari route path sebelum mengirimkan pesan. 
+						<br>
+						<br>
+						Namun jika Anda sudah menentukan route path sendiri, maka gunakan command di bawah. 
+						Setiap ID node di dalam route path dipisahkan dengan tanda koma (',') dengan ID node pertama adalah pengirim dan ID node terakhir adalah node penerima.
+						<br>
+						Contoh : set_route|YrCGaw|YrCAkA,YrZJNA,YvGYJA,YrCGaw.
+						</p>
+						<i class="fa-solid fa-code"></i> set_route | [ID Node Tujuan] | [Route Path]
+						</p>
+						<p>Untuk menghapus route path, gunakan command di bawah.
+						</p>
+						<i class="fa-solid fa-code"></i> del_route
+						</section>
+				    <section class="docs-section" id="item-3-7">
+						<h2 class="section-heading">Message Properties</h2>
+						<p>Dalam pengiriman pesan, Anda akan menerima output dari UART dalam format sebagai berikut.
+						</p>
+						<p>>> ID Node Pengirim | Route Path | Payload
+						</p>
+						</section>
+				    <section class="docs-section" id="item-3-8">
+						<h2 class="section-heading">Sending Message</h2>
+						<p>Maksimum ukuran pesan yang dapat dikirimkan dalam sekali pengiriman adalah 150 karakter.
+						</p>
+						<i class="fa-solid fa-code"></i> msg | [ID Node Tujuan] | [Payload]
+						</section>
+			    </article><!--//docs-article-->
+			    
+
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Security</h1>
+					    <section class="docs-intro">
+							<!-- ALERT -->
+							<div class="alert alert-danger" role="alert">
+								Jangan pernah membagikan kunci enkripsi Anda ke orang lain. 
+								Kami tidak bertanggung jawab terhadap kerugian yang muncul akibat hal tersebut. 
+								Kami menyarankan untuk mengubah kunci enkripsi secara periodik ketika Anda melakukan maintenance sistem Anda.
+							</div>
+							<p>Sistem keamanan di dalam Kawung Network menggunakan sistem enkripsi AES-128. 
+							Secara default, kunci enkripsi dari tiap Kawung Node adalah acak. 
+							Anda perlu untuk menyamakan kunci enkripsi tiap Kawung Node Anda supaya dapat saling berkomunikasi.
+							</p>
+						</section><!--//docs-intro-->
+				    </header>
+						
+						<section class="docs-section" id="item-4-1">
+							<h2 class="section-heading">Changing Encryption Keys</h2>
+							<p>Kunci enkripsi harus berukuran 128 bit atau 16 karakter. Gunakan command di bawah untuk mengubah kunci enkripsi
+							</p>
+						<i class="fa-solid fa-code"></i> set_key | [Your 16 secret character]
+						</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+				        <ul class="social-list list-unstyled pt-4 mb-0">
+						    <li class="list-inline-item"><a href="https://github.com/kawungnet"><i class="fab fa-github fa-fw"></i></a></li> 
+								<!--
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+										-->
+				        </ul><!--//social-list-->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
